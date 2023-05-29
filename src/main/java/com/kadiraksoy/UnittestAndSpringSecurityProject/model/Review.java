@@ -8,12 +8,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "rewiev")
+@Table(name = "review")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Rewiev {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

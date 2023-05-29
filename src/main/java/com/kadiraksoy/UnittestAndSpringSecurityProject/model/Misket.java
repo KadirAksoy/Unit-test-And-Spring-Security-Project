@@ -25,5 +25,5 @@ public class Misket {
     private String type;
 
     @OneToMany(mappedBy = "misket", cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Rewiev> rewievs = new ArrayList<>();
+    private List<Review> reviews = new ArrayList<>();
 }
