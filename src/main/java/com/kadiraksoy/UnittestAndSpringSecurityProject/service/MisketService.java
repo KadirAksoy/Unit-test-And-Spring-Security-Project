@@ -39,8 +39,8 @@ public class MisketService {
     public MisketResponse getAllPokemon(int pageNo, int pageSize) {
         Pageable pageable = PageRequest.of(pageNo, pageSize);
         Page<Misket> miskets = misketRepository.findAll(pageable);
-        List<Misket> listOfPokemon = miskets.getContent();
-        List<MisketDto> content = listOfPokemon.stream().map(p -> mapToDto(p)).collect(Collectors.toList());
+        List<Misket> misketList = miskets.getContent();
+        List<MisketDto> content = misketList.stream().map(p -> mapToDto(p)).collect(Collectors.toList());
 
         MisketResponse misketResponse = new MisketResponse();
         misketResponse.setContent(content);
