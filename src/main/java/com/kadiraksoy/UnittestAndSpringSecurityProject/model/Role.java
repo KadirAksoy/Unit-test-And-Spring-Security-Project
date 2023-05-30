@@ -2,11 +2,11 @@ package com.kadiraksoy.UnittestAndSpringSecurityProject.model;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
+@Data
 @Entity
 @Table(name = "roles")
 public class Role {
