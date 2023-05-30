@@ -5,6 +5,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,13 +17,12 @@ import java.io.IOException;
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private final JwtGenerator jwtGenerator;
-    private final CustomUserDetailsService customUserDetailsService;
+    @Autowired
+    private JwtGenerator jwtGenerator;
+    @Autowired
+    private  CustomUserDetailsService customUserDetailsService;
 
-    public JwtAuthenticationFilter(JwtGenerator jwtGenerator, CustomUserDetailsService customUserDetailsService) {
-        this.jwtGenerator = jwtGenerator;
-        this.customUserDetailsService = customUserDetailsService;
-    }
+
 
     //This code contains a doFilterInternal method, which is one of the Spring Security filters.
     // This method serves as a filter function that runs during the processing of HTTP requests.
