@@ -6,6 +6,7 @@ import com.kadiraksoy.UnittestAndSpringSecurityProject.dto.MisketResponse;
 import com.kadiraksoy.UnittestAndSpringSecurityProject.exception.MisketNotFoundException;
 import com.kadiraksoy.UnittestAndSpringSecurityProject.model.Misket;
 import com.kadiraksoy.UnittestAndSpringSecurityProject.repository.MisketRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -20,6 +21,7 @@ public class MisketService {
 
     private final MisketRepository misketRepository;
 
+
     public MisketService(MisketRepository misketRepository) {
         this.misketRepository = misketRepository;
     }
@@ -31,9 +33,14 @@ public class MisketService {
         misket.setName(misketDto.getName());
         misket.setType(misketDto.getType());
 
-        misketRepository.save(misket);
+        Misket newMisket = misketRepository.save(misket);
 
-        return misketDto;
+        MisketDto misketResponse = new MisketDto();
+        misketResponse.setId(newMisket.getId());
+        misketResponse.setName(newMisket.getName());
+        misketResponse.setType(newMisket.getType());
+
+        return misketResponse;
     }
 
     public MisketResponse getAllMisket(int pageNo, int pageSize) {
