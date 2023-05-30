@@ -23,11 +23,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class ReviewServiceTest {
 
-    @Mock
+
     private MisketRepository misketRepository;
-    @Mock
     private ReviewRepository reviewRepository;
-    @InjectMocks
     private ReviewService reviewService;
 
     private Misket misket;
@@ -35,6 +33,14 @@ class ReviewServiceTest {
     private MisketDto misketDto;
     private ReviewDto reviewDto;
 
+
+    @BeforeEach
+    public void setup() throws Exception{
+        misketRepository = Mockito.mock(MisketRepository.class);
+        reviewRepository = Mockito.mock(ReviewRepository.class);
+        reviewService = new ReviewService(reviewRepository,misketRepository);
+
+    }
 
     // We can define the data in the first place like this.
     @BeforeEach
