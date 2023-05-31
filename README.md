@@ -47,10 +47,10 @@ Test
 ->void dönmeli
 
 
-1-Test ismi yazılır        //
-2-Test verileri hazırlanır       // Data
-3-Bağmlı service'lerin davranışları belirlenir  // mockito.when(...).thenReturn()
-4-Test edilecek metod çalıştırılır		// result = service.function(data)
-5-Test sonuçları karşılaştırılır		// Assertions.assertEquals(result,data)
-6-Bağımlı service'lerin çalıştırılması kontrol edilir// mockito.verify(service/repository/dtoConverter).function()
+<br>1-Test ismi yazılır        //<br>
+<br>2-Test verileri hazırlanır       // Data
+<br>3-Bağmlı service'lerin davranışları belirlenir  // mockito.when(...).thenReturn()
+<br>4-Test edilecek metod çalıştırılır		// result = service.function(data)
+<br>5-Test sonuçları karşılaştırılır		// Assertions.assertEquals(result,data)
+<br>6-Bağımlı service'lerin çalıştırılması kontrol edilir// mockito.verify(service/repository/dtoConverter).function()
 
