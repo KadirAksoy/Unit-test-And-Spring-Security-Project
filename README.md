@@ -77,7 +77,7 @@ JwtProvider class'ımız olmalı bu class JSON Web Token işlemlerini içerir.
 # 3.
 JwtAuthenticationFilter bu class filtreleme işlemlerini gerçekleştirir.
 <br>->doFilterInternal
-<br>--><br>Bu kod, Spring Security filtrelerinden biri olan doFilterInternal yöntemini içerir.
+<br>-->Bu kod, Spring Security filtrelerinden biri olan doFilterInternal yöntemini içerir.
    <br>Bu metot, HTTP isteklerinin işlenmesi sırasında çalışan bir filtre işlevi görür.
 
 <br>->getJWTFromRequest
@@ -87,7 +87,7 @@ JwtAuthenticationFilter bu class filtreleme işlemlerini gerçekleştirir.
 # 4.
 JwtAuthEntryPoint bu class kimlik doğrulama başarısız olduğunda kullanılır.
 <br>->commence
-<br>--><br>Bu yöntem, kimlik doğrulama başarısız olduğunda yürütülür ve
+<br>-->Bu yöntem, kimlik doğrulama başarısız olduğunda yürütülür ve
    <br>yetkilendirme gerektiren korumalı bir kaynağa erişim isteniyor.	
 
 # 5.
@@ -100,10 +100,10 @@ Spring Security'nin HTTP isteklerini nasıl filtreleyeceğini ve yetkilendirece�
 <br>-->AuthenticationManager, kimlik doğrulama işlemlerini yöneten bir Spring Security bileşenidir.
 
 <br>->passwordEncoder
-<br>--><br>BCrypt algoritmasını kullanarak şifreleri özetleyen ve doğrulayan BCryptPasswordEncoder sınıfının bir örneğini döndürür.
+<br>-->BCrypt algoritmasını kullanarak şifreleri özetleyen ve doğrulayan BCryptPasswordEncoder sınıfının bir örneğini döndürür.
    <br>Bu, kullanıcı parolalarının güvenli bir şekilde saklanmasını ve doğrulanmasını sağlar.
 
 <br>->jwtAuthenticationFilter
-<br>--><br>JwtAuthenticationFilter, JWT kimlik doğrulaması için gelen istekleri işleyen bir Spring Security filtresidir,
+<br>-->JwtAuthenticationFilter, JWT kimlik doğrulaması için gelen istekleri işleyen bir Spring Security filtresidir,
    <br>ve kimlik doğrulama başarılı olursa, güvenlik bağlamını kimliği doğrulanmış kimlikle doldurur.
    <br>Bu filtreyi güvenlik yapılandırmasına ekleyerek JWT tabanlı kimlik doğrulamayı etkinleştirir.
