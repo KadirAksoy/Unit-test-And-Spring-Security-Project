@@ -19,25 +19,25 @@ yada  böylede yapılabilir
 setup() fonksiyonu içinde oluşturuyoruz ve mocklanmış class'ları veriyoruz.
 
 
-//2
+2.
 *Fonksiyon şeklinde kullanıcılar oluşturabiliriz(Ve onların dtolarını).
 Bu bize kolaylık sağlar.
 ->Yani bize gerekli olan Data'ları yazıyoruz.
 
-//3
+3.
 *Mockito.when(accountRepository.getAccountById("123")).thenReturn(account)
 ->Böylece kodlar kısmında yazan fonksiyonları çağırırız.
 ->Her metod için when yazılır
 
-//4
+4.
 *AccountDto result = accountService.createAccount(createAccountDto);
 
-//5
+5.
  Assertions.assertEquals(result, accountDto);
 -> Ressult ile kendi oluşturduğumuz accountDto ile kıyaslar aynı ise true döndürür
 	Farklı ise hata fırlatır
 
-//6
+6.
 *Mockito.verify(accountRepository).save(account);
 ->Burda bu fonksiyonu çağırıp çağırmadığını doğrular.
 
