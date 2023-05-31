@@ -59,20 +59,20 @@ Mockito.verify(accountRepository).save(account);
 # 1.
 UserDetailsServiceImp extend UserDetailsService şeklinde class oluştururuz
 <br>->loadUserByUsername
-<br>--><br>sağlanan kullanıcı adına göre UserRepository'den bir kullanıcı alır.
+<br>-->sağlanan kullanıcı adına göre UserRepository'den bir kullanıcı alır.
    <br>Kullanıcı bulunamazsa, bir usernameNotFoundException atar.
    <br>Kullanıcı bulunursa, bir UserDetails nesnesi oluşturulur ve döndürülür.
 
 # 2.
 JwtProvider class'ımız olmalı bu class JSON Web Token işlemlerini içerir.
 <br>->generateToke
-<br>--><br>Bu kod, bir kullanıcı için bir JWT (JSON Web Token) oluşturmayı amaçlar.
+<br>-->Bu kod, bir kullanıcı için bir JWT (JSON Web Token) oluşturmayı amaçlar.
 
 <br>->getUsernameFromJWT
-<br>--><br>Bu kod, kullanıcı adını bir JSON Web Tokeninden (JWT) alır.
+<br>-->Bu kod, kullanıcı adını bir JSON Web Tokeninden (JWT) alır.
 
 <br>->validateToken
-<br>--><br>Bu kod, belirli bir JWT'nin gerçekliğini doğrular.
+<br>-->Bu kod, belirli bir JWT'nin gerçekliğini doğrular.
 
 # 3.
 JwtAuthenticationFilter bu class filtreleme işlemlerini gerçekleştirir.
@@ -81,7 +81,7 @@ JwtAuthenticationFilter bu class filtreleme işlemlerini gerçekleştirir.
    <br>Bu metot, HTTP isteklerinin işlenmesi sırasında çalışan bir filtre işlevi görür.
 
 <br>->getJWTFromRequest
-<br>--><br>Bu kod, JWT'yi bir HTTP isteğinden alır.
+<br>-->Bu kod, JWT'yi bir HTTP isteğinden alır.
    <br>Bir HttpServletRequest nesnesi kullanılarak istekte bulunan JWT'yi elde etmek için kullanılır
 
 # 4.
