@@ -58,52 +58,52 @@ Mockito.verify(accountRepository).save(account);
 
 # 1.
 UserDetailsServiceImp extend UserDetailsService şeklinde class oluştururuz
-->loadUserByUsername
---><br>sağlanan kullanıcı adına göre UserRepository'den bir kullanıcı alır.
+<br>->loadUserByUsername
+<br>--><br>sağlanan kullanıcı adına göre UserRepository'den bir kullanıcı alır.
    <br>Kullanıcı bulunamazsa, bir usernameNotFoundException atar.
    <br>Kullanıcı bulunursa, bir UserDetails nesnesi oluşturulur ve döndürülür.
 
 # 2.
 JwtProvider class'ımız olmalı bu class JSON Web Token işlemlerini içerir.
-->generateToke
---><br>Bu kod, bir kullanıcı için bir JWT (JSON Web Token) oluşturmayı amaçlar.
+<br>->generateToke
+<br>--><br>Bu kod, bir kullanıcı için bir JWT (JSON Web Token) oluşturmayı amaçlar.
 
-->getUsernameFromJWT
---><br>Bu kod, kullanıcı adını bir JSON Web Tokeninden (JWT) alır.
+<br>->getUsernameFromJWT
+<br>--><br>Bu kod, kullanıcı adını bir JSON Web Tokeninden (JWT) alır.
 
-->validateToken
---><br>Bu kod, belirli bir JWT'nin gerçekliğini doğrular.
+<br>->validateToken
+<br>--><br>Bu kod, belirli bir JWT'nin gerçekliğini doğrular.
 
 # 3.
 JwtAuthenticationFilter bu class filtreleme işlemlerini gerçekleştirir.
-->doFilterInternal
---><br>Bu kod, Spring Security filtrelerinden biri olan doFilterInternal yöntemini içerir.
+<br>->doFilterInternal
+<br>--><br>Bu kod, Spring Security filtrelerinden biri olan doFilterInternal yöntemini içerir.
    <br>Bu metot, HTTP isteklerinin işlenmesi sırasında çalışan bir filtre işlevi görür.
 
-->getJWTFromRequest
---><br>Bu kod, JWT'yi bir HTTP isteğinden alır.
+<br>->getJWTFromRequest
+<br>--><br>Bu kod, JWT'yi bir HTTP isteğinden alır.
    <br>Bir HttpServletRequest nesnesi kullanılarak istekte bulunan JWT'yi elde etmek için kullanılır
 
 # 4.
 JwtAuthEntryPoint bu class kimlik doğrulama başarısız olduğunda kullanılır.
-->commence
---><br>Bu yöntem, kimlik doğrulama başarısız olduğunda yürütülür ve
+<br>->commence
+<br>--><br>Bu yöntem, kimlik doğrulama başarısız olduğunda yürütülür ve
    <br>yetkilendirme gerektiren korumalı bir kaynağa erişim isteniyor.	
 
 # 5.
 SecurityConfig bu class configurasyon işlemlerini yapmak için kullanılır.
-->securityFilterChain
--->Bu kod bir Spring Security yapılandırma sınıfında yer alır ve 
+<br>->securityFilterChain
+<br>-->Bu kod bir Spring Security yapılandırma sınıfında yer alır ve 
 Spring Security'nin HTTP isteklerini nasıl filtreleyeceğini ve yetkilendireceğini belirtir. 
  
-->authenticationManager
--->AuthenticationManager, kimlik doğrulama işlemlerini yöneten bir Spring Security bileşenidir.
+<br>->authenticationManager
+<br>-->AuthenticationManager, kimlik doğrulama işlemlerini yöneten bir Spring Security bileşenidir.
 
-->passwordEncoder
---><br>BCrypt algoritmasını kullanarak şifreleri özetleyen ve doğrulayan BCryptPasswordEncoder sınıfının bir örneğini döndürür.
+<br>->passwordEncoder
+<br>--><br>BCrypt algoritmasını kullanarak şifreleri özetleyen ve doğrulayan BCryptPasswordEncoder sınıfının bir örneğini döndürür.
    <br>Bu, kullanıcı parolalarının güvenli bir şekilde saklanmasını ve doğrulanmasını sağlar.
 
-->jwtAuthenticationFilter
---><br>JwtAuthenticationFilter, JWT kimlik doğrulaması için gelen istekleri işleyen bir Spring Security filtresidir,
+<br>->jwtAuthenticationFilter
+<br>--><br>JwtAuthenticationFilter, JWT kimlik doğrulaması için gelen istekleri işleyen bir Spring Security filtresidir,
    <br>ve kimlik doğrulama başarılı olursa, güvenlik bağlamını kimliği doğrulanmış kimlikle doldurur.
    <br>Bu filtreyi güvenlik yapılandırmasına ekleyerek JWT tabanlı kimlik doğrulamayı etkinleştirir.
