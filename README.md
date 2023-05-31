@@ -47,7 +47,7 @@ Mockito.verify(accountRepository).save(account);
 ->void dönmeli
 
 
-<br>1-Test ismi yazılır        //<br>
+<br>1-Test Mock'ları yazılır        //
 <br>2-Test verileri hazırlanır       // Data
 <br>3-Bağmlı service'lerin davranışları belirlenir  // mockito.when(...).thenReturn()
 <br>4-Test edilecek metod çalıştırılır		// result = service.function(data)
