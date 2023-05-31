@@ -3,7 +3,7 @@ An example API that has undergone unit testing and utilizes Spring Security for 
 
 
 # How to Unit Test
-
+# 1.
 İlk önce bize gerekli olan classların Mock'unu oluşturuyoruz.
 
 ->Bunu setup() diye bir fonksiyon içinde yapabiliriz.
