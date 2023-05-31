@@ -46,4 +46,4 @@ Bu bize kolaylık sağlar.
 3-Bağmlı service'lerin davranışları belirlenir  // mockito.when(...).thenReturn()
 4-Test edilecek metod çalıştırılır		// result = service.function(data)
 5-Test sonuçları karşılaştırılır		// Assertions.assertEquals(result,data)
-6-Bağımlı service'lerin çalıştırılması kontrol edilir// mockito.verify(service/repository/dtoConverter).fucntion()
+6-Bağımlı service'lerin çalıştırılması kontrol edilir// mockito.verify(service/repository/dtoConverter).function()
