@@ -4,7 +4,7 @@ An example API that has undergone unit testing and utilizes Spring Security for 
 
 # How to Unit Test
 
-*İlk önce bize gerekli olan classların Mock'unu oluşturuyoruz.
+İlk önce bize gerekli olan classların Mock'unu oluşturuyoruz.
 
 ->Bunu setup() diye bir fonksiyon içinde yapabiliriz.
 ->(accountRepository = Mockito.mock(AccountRepository.class))
@@ -19,30 +19,30 @@ yada  böylede yapılabilir
 setup() fonksiyonu içinde oluşturuyoruz ve mocklanmış class'ları veriyoruz.
 
 
-2.
-*Fonksiyon şeklinde kullanıcılar oluşturabiliriz(Ve onların dtolarını).
+# 2.
+Fonksiyon şeklinde kullanıcılar oluşturabiliriz(Ve onların dtolarını).
 Bu bize kolaylık sağlar.
 ->Yani bize gerekli olan Data'ları yazıyoruz.
 
-3.
-*Mockito.when(accountRepository.getAccountById("123")).thenReturn(account)
+# 3.
+Mockito.when(accountRepository.getAccountById("123")).thenReturn(account)
 ->Böylece kodlar kısmında yazan fonksiyonları çağırırız.
 ->Her metod için when yazılır
 
-4.
-*AccountDto result = accountService.createAccount(createAccountDto);
+# 4.
+AccountDto result = accountService.createAccount(createAccountDto);
 
-5.
- Assertions.assertEquals(result, accountDto);
+# 5.
+Assertions.assertEquals(result, accountDto);
 -> Ressult ile kendi oluşturduğumuz accountDto ile kıyaslar aynı ise true döndürür
 	Farklı ise hata fırlatır
 
-6.
-*Mockito.verify(accountRepository).save(account);
+# 6.
+Mockito.verify(accountRepository).save(account);
 ->Burda bu fonksiyonu çağırıp çağırmadığını doğrular.
 
 
-*Test
+Test
 ->public olmalı
 ->void dönmeli
 
