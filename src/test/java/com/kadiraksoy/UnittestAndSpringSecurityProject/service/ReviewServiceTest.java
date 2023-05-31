@@ -56,14 +56,14 @@ class ReviewServiceTest {
     public void ReviewService_CreateReview_ReturnsReviewDto() {
 
 
-        Mockito.when(misketRepository.findById(misket.getId())).thenReturn(Optional.of(misket));
+        Mockito.when(misketRepository.findById(misket.getId())).thenReturn(Optional.of(misket));   //repository function
         Mockito.when(reviewRepository.save(Mockito.any(Review.class))).thenReturn(review);
 
-        ReviewDto savedReview = reviewService.createReview(misket.getId(), reviewDto);
+        ReviewDto savedReview = reviewService.createReview(misket.getId(), reviewDto);      // service function
 
-        Assertions.assertEquals(reviewDto,savedReview);
+        Assertions.assertEquals(reviewDto,savedReview);                             // Assert
 
-        Mockito.verify(misketRepository).findById(misket.getId());
+        Mockito.verify(misketRepository).findById(misket.getId());               //verify
     }
 
     @Test
